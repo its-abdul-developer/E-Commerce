@@ -1,0 +1,592 @@
+@font-face {
+    font-family: extra;
+    src: url(./fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: ligh;
+    src: url(./fonts/Gilroy-Light.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 4vw;
+    background-color: #e5e9f8;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.60);
+}
+
+#logo {
+    font-size: 3vw;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+#navbar li {
+    list-style: none;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: ligh;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: all linear 0.1s;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 60%;
+    height: 4px;
+    background-color: #088178;
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+
+}
+
+#hero {
+    background-image: url(https://images.pexels.com/photos/735551/pexels-photo-735551.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: top -10% right 0;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 4vw;
+}
+
+#bar {
+    opacity: 0;
+}
+
+#hero h4 {
+    font-size: 2.5vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#hero h2 {
+    font-size: 3.5vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#hero h1 {
+    font-size: 3.5vw;
+    font-family: extra;
+    color: #088178;
+}
+
+#hero p {
+    font-size: 1.1vw;
+    font-family: ligh;
+    color: #1a1a1aa4;
+}
+
+#hero button {
+    border-radius: 5px;
+    transition: all linear 0.2s;
+    border: 0;
+    padding: 12px 80px 12px 65px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1vw;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#hero button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.section-p1 {
+    padding: 0vw 4vw;
+
+}
+
+.section-m1 {
+    margin: 6vw 0;
+}
+
+#features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#features .fe-box {
+    width: 13%;
+    box-shadow: 20px 20px 34px rgb(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    padding: 20px 15px;
+    margin: 3vw 0;
+    text-align: center;
+    transform: 0.3s ease;
+
+}
+
+#features .fe-box:hover {
+    box-shadow: 20px 20px 54px rgb(70, 62, 221, 0.20);
+
+}
+
+.fe-box img {
+    width: 100%;
+    height: 17vh;
+    margin-bottom: 2vh;
+}
+
+.fe-box h6 {
+    display: inline-block;
+    font-size: 1.2vw;
+    font-family: ligh;
+    background-color: #2EB4BF;
+    padding: 6px 10px;
+
+}
+
+#features .fe-box:nth-child(2) h6 {
+    background-color: burlywood;
+}
+
+#features .fe-box:nth-child(3) h6 {
+    background-color: #ABB8BA;
+}
+
+#features .fe-box:nth-child(4) h6 {
+    background-color: #A2A2A2;
+}
+
+#features .fe-box:nth-child(5) h6 {
+    background-color: #F0AC1B;
+}
+
+#features .fe-box:nth-child(6) h6 {
+    background-color: #9d9d9d71;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 h2 {
+    font-size: 5vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#product1 p {
+    margin-top: 2.5vh;
+    font-size: 1.5vw;
+    font-family: ligh;
+    font-weight: 900;
+    color: #1a1a1a8a;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#product1 .pro {
+    position: relative;
+    padding: 12px 12px;
+    width: 23%;
+    min-width: 23%;
+    border: 1px solid #cce7d0;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 8vh;
+    box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.10);
+    transition: 0.2s ease;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgb(0, 0, 0, 0.20);
+
+}
+
+#product1 .pro img {
+    width: 100%;
+    height: 45vh;
+    border-radius: 20px;
+
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 1vw;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    font-size: 1.060vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#product1 .pro .des i {
+    font-size: 0.9vw;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 1.2vw;
+    font-weight: 900;
+    font-family: ligh;
+}
+
+#product1 .pro .ccart {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 3.5%;
+    right: 8%;
+}
+
+#banner {
+    height: 40vh;
+    width: 100%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9vSaNq6zOTjHyxzUS0CMd1Q4ET7gbXyrLbQ&s);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#banner h4 {
+    font-size: 2vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#banner h2 {
+    padding: 15px 0;
+    font-size: 3vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#banner h2 span {
+    font-size: 3.5vw;
+    color: #088178;
+}
+
+#banner button {
+    padding: 15px 60px;
+    font-size: 1vw;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all linear 0.2s;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#banner button:hover {
+    background-color: black;
+    color: #F0AC1B;
+}
+
+#sm-banner {
+    margin-top: 8vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+    height: 50vh;
+    width: 49%;
+    background-image: url(https://img.freepik.com/premium-photo/successful-man-yellow-background_1204450-5614.jpg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2vw;
+}
+
+#sm-banner .banner-box2 {
+    background-image: url(https://www.shutterstock.com/image-photo/cool-businessman-standing-on-grey-260nw-410616313.jpg);
+}
+
+#sm-banner .banner-box h4 {
+    color: white;
+    font-size: 2vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#sm-banner .banner-box h2 {
+    color: white;
+
+    padding-top: 8px;
+    font-size: 3vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#sm-banner .banner-box span {
+    padding-top: 10px;
+    color: white;
+
+    font-size: 1vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#sm-banner .banner-box button {
+    margin-top: 2vh;
+    padding: 13px 40px;
+    font-size: 1vw;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all linear 0.2s;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+}
+
+#sm-banner .banner-box:hover button {
+    background-color: #088178;
+    border: 1px solid #088178;
+
+}
+
+#banner3 {
+    margin-top: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#banner3 .banner-box {
+    height: 20vh;
+    width: 28%;
+    background-image: url(https://t4.ftcdn.net/jpg/06/09/89/55/360_F_609895563_Jl51k4MxgYCQ5j1r2rFJQyEcJm2Wsu6V.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1vw;
+}
+
+#banner3 .banner-box h2 {
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#banner3 .banner-box h3 {
+    color: red;
+    padding-top: 6px;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#banner3 .banner-box2 {
+    height: 20vh;
+    width: 34%;
+    background-image: url(https://c8.alamy.com/comp/2AGG0P9/profile-side-close-up-photo-of-luxury-macho-man-look-copyspace-feel-focused-wear-casual-style-clothes-isolated-over-grey-color-background-2AGG0P9.jpg);
+}
+
+#banner3 .banner-box3 {
+    height: 20vh;
+    width: 28%;
+    background-image: url(https://st2.depositphotos.com/4678277/43421/i/450/depositphotos_434214046-stock-photo-portrait-of-minded-modern-guy.jpg);
+}
+
+#newsletter {
+    height: 25vh;
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/039/365/752/small_2x/ai-generated-floral-blue-flowers-background-ai-generated-photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#newsletter .newstext h4 {
+    color: blue;
+    font-size: 2vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#newsletter .newstext p {
+    padding-top: 7px;
+    font-size: 1vw;
+    font-family: ligh;
+    font-weight: 900;
+}
+
+#newsletter .newstext p span {
+    color: #ffbd27;
+    font-family: extra;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 30%;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+    padding: 0px 45px;
+    font-size: 1vw;
+    font-weight: 600;
+    background-color: #088178;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all linear 0.2s;
+    color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .ri-bell-fill {
+    font-size: 5vw;
+}
+
+footer .col h4 {
+    font-size: 1.3vw;
+    padding-bottom: 15px;
+    font-family: ligh;
+}
+
+footer .col p {
+    font-size: 1.2vw;
+    padding-top: 10px;
+    font-family: ligh;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1vw;
+    color: #222;
+    margin-bottom: 10px;
+    font-family: ligh;
+
+}
+
+footer .follow h4 {
+    padding-top: 25px;
+}
+
+footer .icon i {
+    font-size: 1.3vw;
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .icon i:hover,
+footer a:hover {
+    color: #2EB4BF;
+}
+
+footer .install p {
+    font-size: 0.9vw;
+    margin-bottom: 15px;
+}
+
+footer .row {
+    margin-right: 5vw;
+}
+
+footer img {
+    height: 6vh;
+}
+
+footer .copyright p {
+    position: absolute;
+    left: 38%;
+}
+
